@@ -1,0 +1,70 @@
+
+
+
+<div class="bg" style="background-image: url('../../assets/black-brick-wall-architectural-surface_73152-3751.avif');">
+    <div class="form-container"> 
+     <h1 class="Container">New User?</h1> 
+    <form  [formGroup]="Form" (ngSubmit)="submitData()" >
+        <div class="form-input">
+            <label for="Name" class="form-label">Full Name:</label>
+            <input type="text" name="Name"  id="Name" class="form-control" formControlName="Name" placeholder="Your Name">
+            <div class="alert alert-danger" *ngIf="Form.get('Name').invalid && Form.get('Name').touched">
+                <div *ngIf="Form.get('Name').errors.required">This Field Is Required</div>
+                <div *ngIf="Form.get('Name').errors.pattern">Full Name must contain only character min-3 and max-20</div>
+            </div>
+        </div>
+     
+     
+            <div class="form-input1">
+               <label for="Email" class="form-label">Email</label>
+               <input type="email" name="Email"  id="Email" class="form-control" formControlName="Email" placeholder="name@company.com">
+               <div class="alert alert-danger" *ngIf="Form.get('Name').invalid && Form.get('Email').touched">
+                  <div *ngIf="Form.get('Email').errors.required">This Field Is Required</div>
+                  <div *ngIf="Form.get('Email').errors.pattern">Email must contain only character min-3 and max-20 with special characters and numbers</div>
+               </div>
+            </div>
+           
+            <div class="form-input">
+                <label for="Pass" class="form-label">Password:</label>
+                <input type="text" name="Pass"  id="Pass" class="form-control" formControlName="Pass" placeholder="...........">
+                <div class="alert alert-danger" *ngIf="Form.get('Pass').invalid && Form.get('Pass').touched">
+                    <div *ngIf="Form.get('Pass').errors.required">This Field Is Required</div>
+                    <div *ngIf="Form.get('Pass').errors.pattern"> Pass must contain one digit</div>
+                </div>
+            </div>
+            <div class="form-input">
+            <label for="Confirmpass" class="form-label"> Confirm password:</label>
+            <input type="text" name="Confirmpass"  id="Confirmpass" class="form-control" formControlName="Confirmpass" placeholder="...........">
+            <div class="alert alert-danger" *ngIf="Form.get('Pass').invalid && Form.get('Confirmpass').touched">
+                <div *ngIf="Form.get('Confirmpass').errors.required">This Field Is Required</div>
+                <div *ngIf="Form.get('Confirmpass').errors.pattern">Confirm Password should be same as that of given Password</div>
+    
+      
+     
+            </div>
+        </div>
+                           
+                <div class="row justify-content-between">
+                   <div class="col-auto">
+                      <img class="logo" src="../../assets/googlelogo.png" alt="logo" >
+                   </div>
+                    <div class="col-auto">
+                     <img class="logo1" src="../../assets/image.png" alt="logo" >
+                    </div>
+                    <div class="col-auto">
+                       <img class="logo2" src="../../shared/image.png" alt="logo">
+                    </div>
+                    </div>
+                <br>
+                <div class="form-input">
+                    <input type="checkbox" name="term" class="form-check-input" formControlName="term"> &nbsp;
+                    <label class="form-check-label">Remember me...</label>
+                    <div class ="alert alert-danger" *ngIf="Form.get('term').invalid && Form.get('term').touched">
+                         Accept the Term and Conditions
+                    </div>
+                    <br>
+               </div>
+             <button type="submit"  class="btn btn-dark mt-3 "  style="width: 755px;"  className="form-submit">Register</button>    
+    </form>
+    </div>
+    </div>

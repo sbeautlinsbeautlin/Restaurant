@@ -1,0 +1,115 @@
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color:orange;
+    position: relative;
+    bottom:-50px;
+    
+  }
+  
+  /* Styling for form inputs */
+  .form-input {
+      width: 45%;  
+     /* width:calc(100% _ 5px);  */
+    margin-bottom: 10px;
+    padding: 5px;
+    box-sizing:border-box;
+    display:inline-block;
+    /* border: 1px solid #ccc;
+    border-radius: 5px;
+    flex:right; */
+
+  }
+  .form-input1 {
+    width: 45%; 
+    /* width:calc(100% _ 5px); */
+    margin-bottom: 10px;
+    padding: 5px;
+    box-sizing:border-box;
+    display: inline-block;
+    /* border: 1px solid #ccc;
+    border-radius: 5px;
+    flex:right; */
+
+  }
+  
+  /* Styling for submit button */
+  .form-submit {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Hover effect for submit button */
+  .form-submit:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styling for form link */
+  .form-link {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  /* Hover effect for form link */
+  .form-link:hover {
+    text-decoration: underline;
+  }
+  .logo{
+    width:50px;
+    height:50px;
+    border-radius:25px;
+    margin-left:120px;
+    
+    
+  }
+  .logo1{
+    width:50px;
+    height:50px;
+    border-radius:25px;
+    
+  } 
+    
+  .logo2{
+    width:50px;
+    height:50px;
+    border-radius:25px;
+    margin-right:120px;
+   
+  }
+  .col-auto{
+    margin: 0 calc((100%_800px)/4);
+  }
+  .text-with-lines{
+    border-left:2px solid black;
+    border-right: 2px solid black;
+    padding: 10px;
+    display: inline-block;
+  }
+  .line-container{
+    text-align:center;
+  }
+  .line{
+    border-top: 2px solid black;
+    margin: 2px 0;
+    position:relative;
+  }
+  .line-text{
+    display:inline-block;
+    background-color: fixed;
+    padding: 0 10px;
+    position: relative;
+    top:-10px;
+  }
+  .bg{
+    
+    height: 1000px;
+    
+  }

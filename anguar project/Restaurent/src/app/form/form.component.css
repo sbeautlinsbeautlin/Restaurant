@@ -1,0 +1,70 @@
+/* Reservation Form */
+.reservation-form {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    background-image: url(https://images.pexels.com/photos/4009464/pexels-photo-4009464.jpeg);
+ }
+ .reservation-form h2 {
+    font-style: italic;
+    background-image: url(https://images.pexels.com/photos/4009464/pexels-photo-4009464.jpeg)
+ }
+ .reservation-link {
+    font-family: 'Your Fancy Font', cursive;
+    /* Add your fancy font */
+    text-decoration: none;
+    background-image: url(https://images.pexels.com/photos/4009464/pexels-photo-4009464.jpeg)
+ }
+ .form-group {
+    margin-bottom: 20px;
+   
+ }
+ input[type="text"],
+ input[type="email"],
+ input[type="tel"],
+ select {
+    width: calc(100% - 16px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+ }
+ button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+ }
+ button:hover {
+    background-color: #0056b3;
+ }
+ /* Pop-up Message */
+ .popupMessage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(163, 132, 132, 0.5); /* semi-transparent black */
+ }
+ .content {
+ 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(240, 236, 239);
+    text-align: center;
+    background-image: url(https://tse4.mm.bing.net/th/id/OIP.PulI1PRmHP73-yFxOjj6FwHaFk?rs=1&pid=ImgDetMain);
+ }

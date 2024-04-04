@@ -1,0 +1,37 @@
+ <p>cart works!</p>
+ <header id="cartTitle">
+    <h1>Shopping Cart</h1>
+</header>
+<div id="container">
+    <div *ngFor="let item of cartArray " class="item">
+        <div class="one">
+            <img id="img" src="{{item.img}}">
+        </div>
+        <div class="two">
+            <div class="item-name">
+                {{item.name}}
+            </div>
+            <div class="item-des">
+                This is the cart item and you can see the rest of you items
+            </div>
+        </div>
+        <div class="three">
+            <div id="price">
+                <p>Price Rs</p>
+                <div id="amount">{{item.price}}</div>
+            </div>
+            <div id="quantity">
+                <p>Quantity </p>
+                <div id="quantity-child">{{item.quantity}}</div>
+            </div>
+            <button id="remove" (click)="remove($event)">remove</button>
+            <p id="uId" style="display: none;">{{item.id}}</p>
+        </div>
+    </div>
+    
+    
+</div>
+<div id="total">
+    <h1>Total Rs</h1>
+    <p>{{total}}</p>
+</div>

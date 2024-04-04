@@ -1,0 +1,8 @@
+.bg{
+    background-image: url('../../shared/constant/R.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.title{
+   background-color: blue;
+}

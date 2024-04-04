@@ -1,0 +1,77 @@
+<div class="container">
+    <div class ="sidebar">
+       
+        <ul >
+           
+            <li><a routerLink="/pizza">Pizza</a></li>
+            <li><a routerLink="/burger">Burger</a></li>
+            <li><a routerLink="/pazta">Pazta</a></li>
+            <li><a routerLink="/noodles">Noodles</a></li>
+            <li><a routerLink="/tacos">Tacos</a></li>
+            <li><a routerLink="/fries">Fries</a></li>
+            <li><a routerLink="/drinks">Drinks</a></li>
+            <li><a routerLink="/dessert">Dessert</a></li>
+     
+        </ul>
+    </div>
+    <!-- <div class="content">
+        <router-outlet></router-outlet>
+        </div> -->
+    </div>
+    <div style="background-image: url('../../assets/black-brick-wall-architectural-surface_73152-3751.avif');height: 700px;">
+        <h1 style="text-align: center;position: relative;bottom: -50px; left: 70px;color: orange;">DRINKS</h1>
+     
+        <div class="top-row" style=" position: relative;bottom:-50px;right: -30px;" >
+            <div class="card" *ngFor="let item of topItems" (click)="toggleDescription(item)" style="box-shadow: 0 4px 8px rgba(255, 165, 0, 0.5);">
+              <img [src]="item.image" alt="Card Image" [hidden]="item.showDescription">
+              <div class="card-content" [hidden]="!item.showDescription">
+                <h2 class="card-title">{{ item.title }}</h2>
+               
+                <p class="card-description">{{ item.description }}</p>
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div><br>
+                <div *ngIf="item.showDescription" class="button-container">
+                    <!-- <button class="btn btn-primary">Add to Cart </button>
+                    <button class="btn btn-success">Order Now</button> -->
+                    <p>{{item.id}}</p>
+                  <button type="button" routerLink="/cart" class="btn btn-danger btn-sm" (click)="add($event)">Cart</button>&nbsp;
+                    <button type="button"routerLink="/order" class="btn btn-success btn-sm">Order</button>
+                  </div>
+              </div>
+             
+              <p class="image-time">{{item.title}}</p>
+            </div>
+          </div>
+          <div class="bottom-row" style=" position: relative;bottom:-80px;right:-30px;">
+            <div class="card" *ngFor="let item of bottomItems" (click)="toggleDescription(item)" style="box-shadow: 0 4px 8px rgba(255, 165, 0, 0.5)">
+              <img [src]="item.image" alt="Card Image" [hidden]="item.showDescription">
+              <div class="card-content" [hidden]="!item.showDescription">
+                <h2 class="card-title">{{ item.title }}</h2>
+               
+                <p class="card-description">{{ item.description }}</p>
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+              </div><br>
+                <div *ngIf="item.showDescription" class="button-container">
+                  <p>{{item.id}}</p>
+                  <button type="button" routerLink="/cart" class="btn btn-danger btn-sm" (click)="add($event)">Cart</button>&nbsp;
+                    <!-- <button class="btn btn-primary">Add to Cart</button> -->
+                    <!-- <li><a routerLink="/cart">Cart</a></li> -->
+                    <button type="button"routerLink="/order" class="btn btn-success btn-sm">Order</button>
+                  </div>
+              </div>
+             
+              <p class="image-name">{{item.title}}</p>
+            </div>
+          </div>
+      </div>
+

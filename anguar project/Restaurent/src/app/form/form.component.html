@@ -1,0 +1,44 @@
+<p>form works!</p>
+<p>reservation works!</p>
+<div class="reservation-form">
+<h2><i>Book a Table</i></h2>
+<a href="#" class="reservation-link">Reservation</a>
+<form (ngSubmit)="submitForm()" #reservationForm="ngForm" id="bookingForm">
+<div class="form-group">
+<label for="firstName">First Name</label>
+<input type="text" id="firstName" name="firstName" ngModel required>
+</div>
+<div class="form-group">
+<label for="lastName">Last Name</label>
+<input type="text" id="lastName" name="lastName" ngModel required>
+</div>
+<!-- Integrate third-party calendar and time picker components here -->
+<div class="form-group">
+<label for="people">How many people?</label>
+<select id="people" name="people" ngModel required>
+<option *ngFor="let i of peopleOptions" [value]="i">{{i}}</option>
+</select>
+</div>
+ 
+<div class="form-group">
+<label for="email">Email Address</label>
+<input type="email" id="email" name="email" ngModel required email>
+</div>
+<div class="form-group">
+<label for="phone">Phone No.</label>
+<input type="tel" id="phone" name="phone" ngModel required pattern="[0-9]*">
+</div>
+<div class="form-group">
+    <form><label for="birthday">Choose Date:</label><input type="date" id="birthday" name="birthday">&nbsp;&nbsp;<label for="time">Choose Time:</label><input type="time" id="time" name="time"></form>
+   
+    </div>
+<button type="submit">Submit</button>
+</form>
+</div>
+<!-- Pop-up message -->
+<div class="popupMessage" *ngIf="showPopup">
+<div class="overlay"></div>
+<div class="content">
+<p><strong>Thank you for booking your table! ✔️</strong></p>
+</div>
+</div>

@@ -1,0 +1,38 @@
+.sidebar{
+    height: 100vh;
+    width: 300px;
+    position:fixed;
+    top:0;
+    left:0;
+    padding-top: 20px;
+    background-color:#ffc107;
+    top:52px;
+    display: flex;
+    position:absolute;
+}
+.sidebar ul{
+    list-style-type:none;
+    padding: 0;
+   
+}
+.sidebar li{
+    padding: 10px;
+}
+.sidebar a{
+ 
+    text-decoration: none;
+}
+.sidebar a:hover{
+    color:darkslategrey;
+}
+.active{
+    font-weight: bold;
+}
+.container{
+    display: flex;
+}
+.content{
+    flex: 1;
+    padding-left:200px;
+    padding-right: -900px;
+}
